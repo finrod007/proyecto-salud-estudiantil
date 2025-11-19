@@ -118,7 +118,7 @@ export function DashboardLayout({ children, navigation, userRole }: DashboardLay
         <header className="sticky top-0 z-40 border-b border-border bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60">
           <div className="flex h-16 items-center px-8">
             <h1 className="text-xl font-semibold text-foreground">
-              Sistema de Seguimiento Psicológico y Académico Estudiantil
+              Sistema de Acompañamiento Psicológico y Académico Estudiantil
             </h1>
           </div>
         </header>

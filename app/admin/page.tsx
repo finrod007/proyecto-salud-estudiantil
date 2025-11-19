@@ -44,7 +44,7 @@ const stats = [
     bgColor: 'bg-accent/10',
   },
   {
-    title: 'Estudiantes en Seguimiento',
+    title: 'Estudiantes en Acompañamiento',
     value: '156',
     change: '-5%',
     trend: 'down',

@@ -40,7 +40,7 @@ export default function HomePage() {
           
           <h2 className="text-5xl font-bold mb-6 text-balance">
             Plataforma Integral de{' '}
-            <span className="text-primary">Seguimiento Psicológico</span>
+            <span className="text-primary">Acompañamiento Psicológico</span>
             {' '}y Académico
           </h2>
           
@@ -68,7 +68,7 @@ export default function HomePage() {
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
               <Brain className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-xl font-semibold mb-2">Seguimiento Psicológico</h3>
+            <h3 className="text-xl font-semibold mb-2">Acompañamiento Psicológico</h3>
             <p className="text-muted-foreground text-sm">
               Gestión completa de sesiones, registro emocional y asignación de tareas terapéuticas con retroalimentación en tiempo real
             </p>
@@ -81,7 +81,7 @@ export default function HomePage() {
             </div>
             <h3 className="text-xl font-semibold mb-2">Tutorías Académicas</h3>
             <p className="text-muted-foreground text-sm">
-              Seguimiento académico personalizado, detección temprana de riesgos y sistema de derivación a psicología
+              Acompañamiento académico personalizado, detección temprana de riesgos y sistema de derivación a psicología
             </p>
           </div>
 
