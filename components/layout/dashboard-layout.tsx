@@ -49,7 +49,7 @@ export function DashboardLayout({ children, navigation, userRole }: DashboardLay
               <Brain className="w-6 h-6 text-primary" />
             </div>
             <div className="flex flex-col">
-              <span className="text-sm font-semibold">Bienestar</span>
+              <span className="text-sm font-semibold">Sistema de Bienestar</span>
               <span className="text-xs text-muted-foreground capitalize">{userRole}</span>
             </div>
           </div>
@@ -115,6 +115,14 @@ export function DashboardLayout({ children, navigation, userRole }: DashboardLay
 
       {/* Main Content */}
       <div className="pl-64">
+        <header className="sticky top-0 z-40 border-b border-border bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60">
+          <div className="flex h-16 items-center px-8">
+            <h1 className="text-xl font-semibold text-foreground">
+              Sistema de Seguimiento Psicológico y Académico Estudiantil
+            </h1>
+          </div>
+        </header>
+        
         <main className="min-h-screen p-8">
           {children}
         </main>
