@@ -82,7 +82,7 @@ const mockUsers = [
 
 const getRoleBadge = (role: string) => {
   const badges = {
-    psychologist: { label: 'Psicólogo', variant: 'default' as const },
+    psychologist: { label: 'Apoyo Psicológico', variant: 'default' as const },
     tutor: { label: 'Tutor', variant: 'secondary' as const },
     student: { label: 'Estudiante', variant: 'outline' as const },
     admin: { label: 'Admin', variant: 'destructive' as const },
@@ -124,7 +124,7 @@ export default function UsersPage() {
           <div>
             <h1 className="text-3xl font-bold tracking-tight">Gestión de Usuarios</h1>
             <p className="text-muted-foreground mt-1">
-              Administra cuentas de psicólogos, tutores y estudiantes
+              Administra cuentas de Apoyo Psicológico, tutores y estudiantes
             </p>
           </div>
           <Button className="gap-2">
@@ -148,7 +148,7 @@ export default function UsersPage() {
           <Card className="border-border/50">
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-medium text-muted-foreground">
-                Psicólogos
+                Apoyo Psicológico
               </CardTitle>
             </CardHeader>
             <CardContent>

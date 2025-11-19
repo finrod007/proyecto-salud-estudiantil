@@ -57,7 +57,7 @@ export default function HelpPage() {
                 admin@sistema.edu / admin123
               </div>
               <div className="bg-card p-3 rounded-lg border border-border">
-                <strong>Psicólogo:</strong><br />
+                <strong>Apoyo Psicológico:</strong><br />
                 psicologo@sistema.edu / psi123
               </div>
               <div className="bg-card p-3 rounded-lg border border-border">
@@ -114,7 +114,7 @@ export default function HelpPage() {
                   <p><strong>1.</strong> Ve a "Mis Tareas" para ver los compromisos asignados</p>
                   <p><strong>2.</strong> Marca tareas como completadas con el checkbox</p>
                   <p><strong>3.</strong> Agrega reflexiones personales sobre cada tarea</p>
-                  <p><strong>4.</strong> Lee la retroalimentación del psicólogo cuando esté disponible</p>
+                  <p><strong>4.</strong> Lee la retroalimentación del apoyo psicológico cuando esté disponible</p>
                   <Badge className="mt-2">Notificaciones automáticas</Badge>
                 </CardContent>
               </Card>
@@ -128,7 +128,7 @@ export default function HelpPage() {
                 </CardHeader>
                 <CardContent className="text-sm space-y-2">
                   <p><strong>1.</strong> Accede a "Mensajes" desde el menú</p>
-                  <p><strong>2.</strong> Selecciona un psicólogo o tutor de la lista</p>
+                  <p><strong>2.</strong> Selecciona un profesional de apoyo psicológico o tutor de la lista</p>
                   <p><strong>3.</strong> Escribe y envía mensajes en tiempo real</p>
                   <p><strong>4.</strong> Revisa el historial de conversaciones</p>
                   <Badge className="mt-2">Comunicación segura y privada</Badge>
@@ -146,7 +146,7 @@ export default function HelpPage() {
                   <p><strong>1.</strong> Visualiza tus próximas citas en el dashboard principal</p>
                   <p><strong>2.</strong> Recibe recordatorios de sesiones programadas</p>
                   <p><strong>3.</strong> Consulta detalles de fecha, hora y ubicación</p>
-                  <p><strong>4.</strong> Las sesiones son programadas por tu psicólogo o tutor</p>
+                  <p><strong>4.</strong> Las sesiones son programadas por tu profesional de apoyo psicológico o tutor</p>
                   <Badge className="mt-2">Recordatorios automáticos</Badge>
                 </CardContent>
               </Card>
@@ -160,7 +160,7 @@ export default function HelpPage() {
                 <Brain className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold">Panel del Psicólogo</h3>
+                <h3 className="text-2xl font-bold">Panel de Apoyo Psicológico</h3>
                 <p className="text-sm text-muted-foreground">Gestiona sesiones y seguimiento de estudiantes</p>
               </div>
             </div>
@@ -272,7 +272,7 @@ export default function HelpPage() {
                   <p><strong>1.</strong> Accede a "Derivaciones" desde el menú</p>
                   <p><strong>2.</strong> Click en "Nueva Derivación"</p>
                   <p><strong>3.</strong> Completa motivo, síntomas observados y urgencia</p>
-                  <p><strong>4.</strong> El psicólogo recibe la notificación automáticamente</p>
+                  <p><strong>4.</strong> El profesional de apoyo psicológico recibe la notificación automáticamente</p>
                   <Badge className="mt-2">Atención prioritaria</Badge>
                 </CardContent>
               </Card>
@@ -333,7 +333,7 @@ export default function HelpPage() {
                 </CardHeader>
                 <CardContent className="text-sm space-y-2">
                   <p><strong>1.</strong> Ve a "Usuarios" para ver todos los registrados</p>
-                  <p><strong>2.</strong> Filtra por rol (estudiante, psicólogo, tutor)</p>
+                  <p><strong>2.</strong> Filtra por rol (estudiante, apoyo psicológico, tutor)</p>
                   <p><strong>3.</strong> Busca usuarios específicos por nombre o email</p>
                   <p><strong>4.</strong> Administra permisos y estados de cuenta</p>
                   <Badge className="mt-2">Control total</Badge>

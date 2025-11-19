@@ -26,7 +26,7 @@ const stats = [
     bgColor: 'bg-primary/10',
   },
   {
-    title: 'Psicólogos Activos',
+    title: 'Apoyo Psicológico Activo',
     value: '24',
     change: '+2',
     trend: 'up',
@@ -57,7 +57,7 @@ const stats = [
 const recentActivities = [
   {
     user: 'Dr. María González',
-    role: 'Psicóloga',
+    role: 'Apoyo Psicológico',
     action: 'Registró nueva sesión con estudiante #1234',
     time: 'Hace 5 minutos',
     type: 'session',
@@ -72,13 +72,13 @@ const recentActivities = [
   {
     user: 'Admin Sistema',
     role: 'Administrador',
-    action: 'Creó nueva cuenta de psicólogo',
+    action: 'Creó nueva cuenta de Apoyo Psicológico',
     time: 'Hace 1 hora',
     type: 'user',
   },
   {
     user: 'Dra. Ana Silva',
-    role: 'Psicóloga',
+    role: 'Apoyo Psicológico',
     action: 'Cerró caso de estudiante #5678',
     time: 'Hace 2 horas',
     type: 'closure',

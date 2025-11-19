@@ -258,8 +258,8 @@ export default function ReportsPage() {
             <div className="grid gap-6 lg:grid-cols-2">
               <Card className="border-border/50">
                 <CardHeader>
-                  <CardTitle>Sesiones por Psicólogo</CardTitle>
-                  <CardDescription>Top 5 psicólogos más activos</CardDescription>
+                  <CardTitle>Sesiones por Apoyo Psicológico</CardTitle>
+                  <CardDescription>Top 5 profesionales más activos</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
@@ -573,7 +573,7 @@ export default function ReportsPage() {
                             <p>Año: {student.year}</p>
                             <p>Riesgo: {student.risk}</p>
                             <p>Última sesión: {student.lastSession}</p>
-                            <p className="col-span-2">Psicólogo: {student.psychologist}</p>
+                            <p className="col-span-2">Apoyo Psicológico: {student.psychologist}</p>
                           </div>
                         </div>
                         <Button size="sm" variant="destructive">Ver Detalles</Button>

@@ -45,7 +45,7 @@ export default function HomePage() {
           </h2>
           
           <p className="text-xl text-muted-foreground mb-8 text-pretty max-w-2xl mx-auto">
-            Sistema profesional de gestión para el bienestar estudiantil que conecta psicólogos, 
+            Sistema profesional de gestión para el bienestar estudiantil que conecta profesionales de apoyo psicológico, 
             tutores y estudiantes en un solo lugar
           </p>
 
@@ -125,7 +125,7 @@ export default function HomePage() {
             </div>
             <h3 className="text-xl font-semibold mb-2">Comunicación Integrada</h3>
             <p className="text-muted-foreground text-sm">
-              Sistema de mensajería interna que conecta estudiantes con psicólogos y tutores de forma segura
+              Sistema de mensajería interna que conecta estudiantes con profesionales de apoyo psicológico y tutores de forma segura
             </p>
           </div>
         </div>

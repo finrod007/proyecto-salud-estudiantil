@@ -84,6 +84,7 @@ export function LoginForm() {
               placeholder="usuario@sistema.edu"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              autoComplete="email"
               required
               disabled={loading}
             />
@@ -106,6 +107,7 @@ export function LoginForm() {
                 type={showPassword ? 'text' : 'password'}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                autoComplete="current-password"
                 required
                 disabled={loading}
               />
@@ -129,7 +131,7 @@ export function LoginForm() {
             <p className="text-xs text-muted-foreground bg-muted/50 p-3 rounded-lg">
               <strong>Demo - Credenciales de prueba:</strong><br />
               Admin: admin@sistema.edu / admin123<br />
-              Psicólogo: psicologo@sistema.edu / psi123<br />
+              Apoyo Psicológico: psicologo@sistema.edu / psi123<br />
               Tutor: tutor@sistema.edu / tutor123<br />
               Estudiante: estudiante@sistema.edu / est123
             </p>
