@@ -21,7 +21,7 @@ import { dataStore } from '@/lib/store'
 const navigation = [
   { name: 'Panel General', href: '/psychologist', icon: LayoutDashboard },
   { name: 'Mis Estudiantes', href: '/psychologist/students', icon: Users },
-  { name: 'Sesiones', href: '/psychologist/sessions', icon: Calendar },
+  { name: 'Citas', href: '/psychologist/sessions', icon: Calendar },
   { name: 'Mensajes', href: '/psychologist/messages', icon: MessageSquare },
 ]
 
@@ -272,14 +272,14 @@ export default function StudentProfilePage() {
                   <DialogTrigger asChild>
                     <Button>
                       <Plus className="h-4 w-4 mr-2" />
-                      Nueva Sesión
+                      Nueva Cita
                     </Button>
                   </DialogTrigger>
                   <DialogContent className="max-w-2xl">
                     <DialogHeader>
-                      <DialogTitle>Programar Nueva Sesión</DialogTitle>
+                      <DialogTitle>Programar Nueva Cita</DialogTitle>
                       <DialogDescription>
-                        Agenda una sesión con Ana Martínez
+                        Agenda una cita con Ana Martínez
                       </DialogDescription>
                     </DialogHeader>
                     
@@ -324,7 +324,7 @@ export default function StudentProfilePage() {
                           </Select>
                         </div>
                         <div className="grid gap-2">
-                          <Label htmlFor="type">Tipo de Sesión</Label>
+                          <Label htmlFor="type">Tipo de Cita</Label>
                           <Select 
                             value={sessionFormData.type}
                             onValueChange={(value) => setSessionFormData({...sessionFormData, type: value})}
@@ -333,7 +333,7 @@ export default function StudentProfilePage() {
                               <SelectValue />
                             </SelectTrigger>
                             <SelectContent>
-                              <SelectItem value="Primera Sesión">Primera Sesión</SelectItem>
+                              <SelectItem value="Primera Cita">Primera Cita</SelectItem>
                               <SelectItem value="Seguimiento">Seguimiento</SelectItem>
                               <SelectItem value="Evaluación">Evaluación</SelectItem>
                               <SelectItem value="Urgencia">Urgencia</SelectItem>
@@ -364,7 +364,7 @@ export default function StudentProfilePage() {
                         <Label htmlFor="notes">Notas</Label>
                         <Textarea 
                           id="notes" 
-                          placeholder="Notas sobre la sesión..."
+                          placeholder="Notas sobre la cita..."
                           rows={3}
                           value={sessionFormData.notes}
                           onChange={(e) => setSessionFormData({...sessionFormData, notes: e.target.value})}
@@ -377,7 +377,7 @@ export default function StudentProfilePage() {
                         Cancelar
                       </Button>
                       <Button onClick={handleCreateSession}>
-                        Crear Sesión
+                        Crear Cita
                       </Button>
                     </DialogFooter>
                   </DialogContent>
@@ -411,7 +411,7 @@ export default function StudentProfilePage() {
           <Card className="border-border/50">
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-medium text-muted-foreground">
-                Total Sesiones
+                Total Citas
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -451,7 +451,7 @@ export default function StudentProfilePage() {
         <Tabs defaultValue="timeline" className="space-y-6">
           <TabsList>
             <TabsTrigger value="timeline">Línea de Tiempo</TabsTrigger>
-            <TabsTrigger value="sessions">Sesiones</TabsTrigger>
+            <TabsTrigger value="sessions">Citas</TabsTrigger>
             <TabsTrigger value="tasks">Tareas y Acuerdos</TabsTrigger>
             <TabsTrigger value="mood">Estado Emocional</TabsTrigger>
           </TabsList>
@@ -543,14 +543,14 @@ export default function StudentProfilePage() {
               <Card className="border-border/50">
                 <CardContent className="py-12 text-center text-muted-foreground">
                   <Calendar className="h-12 w-12 mx-auto mb-4 opacity-50" />
-                  <p>No hay sesiones registradas</p>
+                  <p>No hay citas registradas</p>
                   <Button 
                     variant="outline" 
                     className="mt-4"
                     onClick={() => setIsSessionDialogOpen(true)}
                   >
                     <Plus className="h-4 w-4 mr-2" />
-                    Crear Primera Sesión
+                    Crear Primera Cita
                   </Button>
                 </CardContent>
               </Card>
@@ -804,7 +804,7 @@ export default function StudentProfilePage() {
                     className="resize-none"
                   />
                   <p className="text-xs text-muted-foreground">
-                    Esta retroalimentación se discutirá en la próxima sesión
+                    Esta retroalimentación se discutirá en la próxima cita
                   </p>
                 </div>
               </div>

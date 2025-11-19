@@ -18,7 +18,7 @@ import { dataStore } from '@/lib/store'
 const navigation = [
   { name: 'Panel General', href: '/psychologist', icon: LayoutDashboard },
   { name: 'Mis Estudiantes', href: '/psychologist/students', icon: Users },
-  { name: 'Sesiones', href: '/psychologist/sessions', icon: Calendar },
+  { name: 'Citas', href: '/psychologist/sessions', icon: Calendar },
   { name: 'Mensajes', href: '/psychologist/messages', icon: MessageSquare },
 ]
 
@@ -116,7 +116,7 @@ export default function PsychologistSessionsPage() {
   }
 
   const handleDeleteSession = (sessionId: string) => {
-    if (confirm('¿Estás seguro de que deseas cancelar esta sesión?')) {
+    if (confirm('¿Estás seguro de que deseas cancelar esta cita?')) {
       dataStore.deleteSession(sessionId)
       loadSessions()
     }
@@ -132,23 +132,23 @@ export default function PsychologistSessionsPage() {
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight">Sesiones</h1>
+            <h1 className="text-3xl font-bold tracking-tight">Citas</h1>
             <p className="text-muted-foreground mt-1">
-              Gestiona tus sesiones y da seguimiento a tus estudiantes
+              Gestiona tus citas y da seguimiento a tus estudiantes
             </p>
           </div>
           <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
             <DialogTrigger asChild>
               <Button className="gap-2">
                 <Plus className="h-4 w-4" />
-                Nueva Sesión
+                Nueva Cita
               </Button>
             </DialogTrigger>
             <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
               <DialogHeader>
-                <DialogTitle>Crear Nueva Sesión</DialogTitle>
+                <DialogTitle>Crear Nueva Cita</DialogTitle>
                 <DialogDescription>
-                  Programa una nueva sesión con un estudiante
+                  Programa una nueva cita con un estudiante
                 </DialogDescription>
               </DialogHeader>
               
@@ -211,7 +211,7 @@ export default function PsychologistSessionsPage() {
                     </Select>
                   </div>
                   <div className="grid gap-2">
-                    <Label htmlFor="type">Tipo de Sesión</Label>
+                    <Label htmlFor="type">Tipo de Cita</Label>
                     <Select 
                       value={formData.type}
                       onValueChange={(value) => setFormData({...formData, type: value})}
@@ -220,7 +220,7 @@ export default function PsychologistSessionsPage() {
                         <SelectValue />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="Primera Sesión">Primera Sesión</SelectItem>
+                        <SelectItem value="Primera Cita">Primera Cita</SelectItem>
                         <SelectItem value="Seguimiento">Seguimiento</SelectItem>
                         <SelectItem value="Evaluación">Evaluación</SelectItem>
                         <SelectItem value="Urgencia">Urgencia</SelectItem>
@@ -251,7 +251,7 @@ export default function PsychologistSessionsPage() {
                   <Label htmlFor="notes">Notas</Label>
                   <Textarea 
                     id="notes" 
-                    placeholder="Notas adicionales sobre la sesión..."
+                    placeholder="Notas adicionales sobre la cita..."
                     rows={3}
                     value={formData.notes}
                     onChange={(e) => setFormData({...formData, notes: e.target.value})}
@@ -264,7 +264,7 @@ export default function PsychologistSessionsPage() {
                   Cancelar
                 </Button>
                 <Button onClick={handleCreateSession}>
-                  Crear Sesión
+                  Crear Cita
                 </Button>
               </DialogFooter>
             </DialogContent>
@@ -275,7 +275,7 @@ export default function PsychologistSessionsPage() {
           <Card className="border-border/50">
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-medium text-muted-foreground">
-                Total Sesiones
+                Total Citas
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -376,7 +376,7 @@ export default function PsychologistSessionsPage() {
               <Card className="border-border/50">
                 <CardContent className="py-12 text-center text-muted-foreground">
                   <Calendar className="h-12 w-12 mx-auto mb-4 opacity-50" />
-                  <p>No hay sesiones próximas</p>
+                  <p>No hay citas próximas</p>
                 </CardContent>
               </Card>
             )}
@@ -418,7 +418,7 @@ export default function PsychologistSessionsPage() {
             ) : (
               <Card className="border-border/50">
                 <CardContent className="py-12 text-center text-muted-foreground">
-                  <p>No hay sesiones completadas aún</p>
+                  <p>No hay citas completadas aún</p>
                 </CardContent>
               </Card>
             )}

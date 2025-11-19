@@ -12,7 +12,7 @@ import { Users, Calendar, AlertCircle, TrendingUp, LayoutDashboard, MessageSquar
 const navigation = [
   { name: 'Panel General', href: '/psychologist', icon: LayoutDashboard },
   { name: 'Mis Estudiantes', href: '/psychologist/students', icon: Users },
-  { name: 'Sesiones', href: '/psychologist/sessions', icon: Calendar },
+  { name: 'Citas', href: '/psychologist/sessions', icon: Calendar },
   { name: 'Mensajes', href: '/psychologist/messages', icon: MessageSquare },
 ]
 
@@ -25,7 +25,7 @@ const stats = [
     bgColor: 'bg-primary/10',
   },
   {
-    title: 'Sesiones Esta Semana',
+    title: 'Citas Esta Semana',
     value: '12',
     icon: Calendar,
     color: 'text-secondary',
@@ -87,7 +87,7 @@ const upcomingSessions = [
   {
     student: 'María López',
     time: 'Hoy, 4:00 PM',
-    type: 'Primera Sesión',
+    type: 'Primera Cita',
     location: 'Consultorio 3',
   },
   {
@@ -146,12 +146,12 @@ export default function PsychologistDashboard() {
           <div>
             <h1 className="text-3xl font-bold tracking-tight">Panel de Apoyo Psicológico</h1>
             <p className="text-muted-foreground mt-1">
-              Gestiona tus sesiones y da seguimiento a tus estudiantes
+              Gestiona tus citas y da seguimiento a tus estudiantes
             </p>
           </div>
           <Button className="gap-2" onClick={() => router.push('/psychologist/sessions')}>
             <UserPlus className="h-4 w-4" />
-            Nueva Sesión
+            Nueva Cita
           </Button>
         </div>
 
@@ -161,7 +161,7 @@ export default function PsychologistDashboard() {
             <Card key={stat.title} className="border-border/50">
               <CardHeader className="flex flex-row items-center justify-between pb-2">
                 <CardTitle className="text-sm font-medium text-muted-foreground">
-                  {stat.title}
+                  {stat.title === 'Sesiones Esta Semana' ? 'Citas Esta Semana' : stat.title}
                 </CardTitle>
                 <div className={`${stat.bgColor} p-2 rounded-lg`}>
                   <stat.icon className={`h-4 w-4 ${stat.color}`} />
@@ -230,7 +230,7 @@ export default function PsychologistDashboard() {
           {/* Upcoming Sessions */}
           <Card className="border-border/50">
             <CardHeader>
-              <CardTitle>Próximas Sesiones</CardTitle>
+              <CardTitle>Próximas Citas</CardTitle>
               <CardDescription>
                 Tu agenda para los próximos días
               </CardDescription>
@@ -263,7 +263,7 @@ export default function PsychologistDashboard() {
                   className="w-full mt-4"
                   onClick={() => router.push('/psychologist/sessions')}
                 >
-                  Ver Todas las Sesiones
+                  Ver Todas las Citas
                 </Button>
               </div>
             </CardContent>
