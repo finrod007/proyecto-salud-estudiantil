@@ -1,62 +1,68 @@
-'use client'
+"use client"
 
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-import { Alert, AlertDescription } from '@/components/ui/alert'
-import { Eye, EyeOff, Loader2 } from 'lucide-react'
+import type React from "react"
+
+import { useState } from "react"
+import { useRouter } from "next/navigation"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Alert, AlertDescription } from "@/components/ui/alert"
+import { Eye, EyeOff, Loader2 } from "lucide-react"
 
 // Mock authentication - replace with real auth
 const mockUsers = {
-  'admin@sistema.edu': { password: 'admin123', role: 'admin' },
-  'psicologo@sistema.edu': { password: 'psi123', role: 'psychologist' },
-  'tutor@sistema.edu': { password: 'tutor123', role: 'tutor' },
-  'estudiante@sistema.edu': { password: 'est123', role: 'student' },
+  "admin@sistema.edu": { password: "admin123", role: "admin" },
+  "psicologo@sistema.edu": { password: "psi123", role: "psychologist" },
+  "tutor@sistema.edu": { password: "tutor123", role: "tutor" },
+  "estudiante@sistema.edu": { password: "est123", role: "student" },
+  "psicopedagogo@sistema.edu": { password: "psico123", role: "psychopedagogue" },
 }
 
 export function LoginForm() {
   const router = useRouter()
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
   const [showPassword, setShowPassword] = useState(false)
-  const [error, setError] = useState('')
+  const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setError('')
+    setError("")
     setLoading(true)
 
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 800))
+    await new Promise((resolve) => setTimeout(resolve, 800))
 
     const user = mockUsers[email as keyof typeof mockUsers]
-    
+
     if (user && user.password === password) {
       // Store role in localStorage for demo
-      localStorage.setItem('userRole', user.role)
-      localStorage.setItem('userEmail', email)
-      
+      localStorage.setItem("userRole", user.role)
+      localStorage.setItem("userEmail", email)
+
       // Redirect based on role
       switch (user.role) {
-        case 'admin':
-          router.push('/admin')
+        case "admin":
+          router.push("/admin")
           break
-        case 'psychologist':
-          router.push('/psychologist')
+        case "psychologist":
+          router.push("/psychologist")
           break
-        case 'tutor':
-          router.push('/tutor')
+        case "tutor":
+          router.push("/tutor")
           break
-        case 'student':
-          router.push('/student')
+        case "student":
+          router.push("/student")
+          break
+        case "psychopedagogue":
+          router.push("/psychopedagogue")
           break
       }
     } else {
-      setError('Credenciales incorrectas. Por favor, intenta de nuevo.')
+      setError("Credenciales incorrectas. Por favor, intenta de nuevo.")
       setLoading(false)
     }
   }
@@ -65,9 +71,7 @@ export function LoginForm() {
     <Card className="border-border/50 shadow-lg">
       <CardHeader className="space-y-1">
         <CardTitle className="text-2xl">Iniciar Sesión</CardTitle>
-        <CardDescription>
-          Ingresa tu correo electrónico y contraseña
-        </CardDescription>
+        <CardDescription>Ingresa tu correo electrónico y contraseña</CardDescription>
       </CardHeader>
       <form onSubmit={handleSubmit}>
         <CardContent className="space-y-4">
@@ -104,7 +108,7 @@ export function LoginForm() {
             <div className="relative">
               <Input
                 id="password"
-                type={showPassword ? 'text' : 'password'}
+                type={showPassword ? "text" : "password"}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 autoComplete="current-password"
@@ -129,11 +133,17 @@ export function LoginForm() {
           </div>
           <div className="pt-2">
             <p className="text-xs text-muted-foreground bg-muted/50 p-3 rounded-lg">
-              <strong>Demo - Credenciales de prueba:</strong><br />
-              Admin: admin@sistema.edu / admin123<br />
-              Apoyo Psicológico: psicologo@sistema.edu / psi123<br />
-              Tutor: tutor@sistema.edu / tutor123<br />
+              <strong>Demo - Credenciales de prueba:</strong>
+              <br />
+              Admin: admin@sistema.edu / admin123
+              <br />
+              Apoyo Psicológico: psicologo@sistema.edu / psi123
+              <br />
+              Tutor: tutor@sistema.edu / tutor123
+              <br />
               Estudiante: estudiante@sistema.edu / est123
+              <br />
+              Psicopedagogo: psicopedagogo@sistema.edu / psico123
             </p>
           </div>
         </CardContent>
@@ -145,7 +155,7 @@ export function LoginForm() {
                 Ingresando...
               </>
             ) : (
-              'Ingresar'
+              "Ingresar"
             )}
           </Button>
         </CardFooter>
