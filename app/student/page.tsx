@@ -6,7 +6,18 @@ import { DashboardLayout } from "@/components/layout/dashboard-layout"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Calendar, Heart, CheckCircle2, MessageSquare, LayoutDashboard, FileText, Clock, Plus } from "lucide-react"
+import {
+  Calendar,
+  Heart,
+  CheckCircle2,
+  MessageSquare,
+  LayoutDashboard,
+  FileText,
+  Clock,
+  Plus,
+  AlertCircle,
+  X,
+} from "lucide-react"
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts"
 
 const navigation = [
@@ -74,6 +85,7 @@ const currentMood = 3
 export default function StudentDashboard() {
   const router = useRouter()
   const [mounted, setMounted] = useState(false)
+  const [showSupportAlert, setShowSupportAlert] = useState(true)
 
   useEffect(() => {
     setMounted(true)
@@ -88,6 +100,53 @@ export default function StudentDashboard() {
   return (
     <DashboardLayout navigation={navigation} userRole="student">
       <div className="space-y-6 lg:space-y-8">
+        {showSupportAlert && (
+          <Card className="border-2 border-primary bg-gradient-to-br from-primary/10 via-primary/5 to-background shadow-lg animate-in fade-in slide-in-from-top-4 duration-500">
+            <CardContent className="pt-4 pb-4 relative">
+              <button
+                onClick={() => setShowSupportAlert(false)}
+                className="absolute top-2 right-2 p-1.5 rounded-full hover:bg-primary/20 transition-colors"
+                aria-label="Cerrar alerta"
+              >
+                <X className="h-4 w-4 text-muted-foreground" />
+              </button>
+
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pr-6">
+                <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-primary/20 flex items-center justify-center ring-2 ring-primary/30 ring-offset-2 ring-offset-background">
+                  <AlertCircle className="h-6 w-6 sm:h-7 sm:w-7 text-primary animate-pulse" />
+                </div>
+
+                <div className="flex-1 space-y-3">
+                  <div className="space-y-2">
+                    <p className="text-sm sm:text-base text-foreground leading-relaxed">
+                      Detectamos que podrías necesitar apoyo. Tu tutor está disponible. Puedes agendar ahora.
+                    </p>
+                    <p className="text-lg sm:text-xl font-bold text-primary tracking-tight">No estás solo.</p>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+                    <Button
+                      className="gap-2 w-full sm:w-auto shadow-md"
+                      onClick={() => router.push("/student/messages")}
+                    >
+                      <MessageSquare className="h-4 w-4" />
+                      Contactar Ahora
+                    </Button>
+                    <Button
+                      variant="outline"
+                      className="gap-2 w-full sm:w-auto bg-transparent"
+                      onClick={() => router.push("/student/mood")}
+                    >
+                      <Heart className="h-4 w-4" />
+                      Registrar Cómo me Siento
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
         {/* Welcome Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
