@@ -61,7 +61,7 @@ export function DashboardLayout({ children, navigation, userRole }: DashboardLay
                 <Brain className="w-6 h-6 text-primary" />
               </div>
               <div className="flex flex-col">
-                <span className="text-sm font-semibold">Sistema de Bienestar</span>
+                <span className="text-sm font-semibold">SASSE</span>
                 <span className="text-xs text-muted-foreground capitalize">{userRole}</span>
               </div>
             </div>
@@ -137,7 +137,7 @@ export function DashboardLayout({ children, navigation, userRole }: DashboardLay
               <Menu className="h-5 w-5" />
             </Button>
             <h1 className="text-sm sm:text-base lg:text-xl font-semibold text-foreground line-clamp-1">
-              Sistema de Acompañamiento Psicológico y Académico Estudiantil
+              SASSE - Sistema de Apoyo y Seguimiento de Salud Estudiantil
             </h1>
           </div>
         </header>

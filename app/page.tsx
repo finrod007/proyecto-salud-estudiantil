@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import { Brain, Users, BarChart3, Heart, Shield, Zap } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import Link from "next/link"
+import { Brain, Users, BarChart3, Heart, Shield, Zap } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export default function HomePage() {
   return (
@@ -14,8 +14,8 @@ export default function HomePage() {
                 <Brain className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h1 className="text-lg font-bold">Sistema de Bienestar Estudiantil</h1>
-                <p className="text-xs text-muted-foreground">Plataforma Institucional</p>
+                <h1 className="text-lg font-bold">SASSE</h1>
+                <p className="text-xs text-muted-foreground">Sistema de Apoyo y Seguimiento</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -37,15 +37,14 @@ export default function HomePage() {
             <Heart className="w-4 h-4" />
             <span className="font-medium">Compromiso con tu bienestar integral</span>
           </div>
-          
+
           <h2 className="text-5xl font-bold mb-6 text-balance">
-            Plataforma Integral de{' '}
-            <span className="text-primary">Acompañamiento Psicológico</span>
-            {' '}y Académico
+            <span className="text-primary">SASSE</span> - Plataforma Integral de Apoyo y Seguimiento de Salud
+            Estudiantil
           </h2>
-          
+
           <p className="text-xl text-muted-foreground mb-8 text-pretty max-w-2xl mx-auto">
-            Sistema profesional de gestión para el bienestar estudiantil que conecta profesionales de apoyo psicológico, 
+            Sistema profesional de gestión para el bienestar estudiantil que conecta profesionales de apoyo psicológico,
             tutores y estudiantes en un solo lugar
           </p>
 
@@ -70,7 +69,8 @@ export default function HomePage() {
             </div>
             <h3 className="text-xl font-semibold mb-2">Acompañamiento Psicológico</h3>
             <p className="text-muted-foreground text-sm">
-              Gestión completa de sesiones, registro emocional y asignación de tareas terapéuticas con retroalimentación en tiempo real
+              Gestión completa de sesiones, registro emocional y asignación de tareas terapéuticas con retroalimentación
+              en tiempo real
             </p>
           </div>
 
@@ -103,7 +103,8 @@ export default function HomePage() {
             </div>
             <h3 className="text-xl font-semibold mb-2">Privacidad y Seguridad</h3>
             <p className="text-muted-foreground text-sm">
-              Sistema de roles con acceso controlado, datos encriptados y cumplimiento de normativas de protección de datos
+              Sistema de roles con acceso controlado, datos encriptados y cumplimiento de normativas de protección de
+              datos
             </p>
           </div>
 
@@ -114,7 +115,8 @@ export default function HomePage() {
             </div>
             <h3 className="text-xl font-semibold mb-2">Registro Emocional</h3>
             <p className="text-muted-foreground text-sm">
-              Los estudiantes pueden registrar su estado de ánimo diario con visualización de tendencias y alertas automáticas
+              Los estudiantes pueden registrar su estado de ánimo diario con visualización de tendencias y alertas
+              automáticas
             </p>
           </div>
 
@@ -125,7 +127,8 @@ export default function HomePage() {
             </div>
             <h3 className="text-xl font-semibold mb-2">Comunicación Integrada</h3>
             <p className="text-muted-foreground text-sm">
-              Sistema de mensajería interna que conecta estudiantes con profesionales de apoyo psicológico y tutores de forma segura
+              Sistema de mensajería interna que conecta estudiantes con profesionales de apoyo psicológico y tutores de
+              forma segura
             </p>
           </div>
         </div>
@@ -135,9 +138,7 @@ export default function HomePage() {
       <section className="container mx-auto px-6 py-20">
         <div className="max-w-4xl mx-auto bg-primary/5 border border-primary/20 rounded-3xl p-12 text-center">
           <h3 className="text-3xl font-bold mb-4">¿Listo para comenzar?</h3>
-          <p className="text-muted-foreground mb-8 text-lg">
-            Accede al sistema con tus credenciales institucionales
-          </p>
+          <p className="text-muted-foreground mb-8 text-lg">Accede al sistema con tus credenciales institucionales</p>
           <Link href="/login">
             <Button size="lg" className="gap-2">
               Iniciar Sesión
@@ -155,13 +156,11 @@ export default function HomePage() {
                 <Brain className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <p className="text-sm font-medium">Sistema de Bienestar Estudiantil</p>
-                <p className="text-xs text-muted-foreground">Plataforma Institucional</p>
+                <p className="text-sm font-medium">SASSE</p>
+                <p className="text-xs text-muted-foreground">Sistema de Apoyo y Seguimiento</p>
               </div>
             </div>
-            <p className="text-sm text-muted-foreground">
-              © 2025 Sistema de Bienestar. Todos los derechos reservados.
-            </p>
+            <p className="text-sm text-muted-foreground">© 2025 SASSE. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>
